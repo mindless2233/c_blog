@@ -12,7 +12,8 @@ var DB *gorm.DB
 var err error
 
 func init() {
-	dsn := "blog:Tenderness0912!@tcp(localhost:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "blog:Tenderness0912!@tcp(120.53.245.8:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local"
+	//dsn := "blog:Tenderness0912!@tcp(localhost:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local"
 	DB, _ = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),
 		NamingStrategy: schema.NamingStrategy{

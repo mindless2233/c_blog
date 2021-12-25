@@ -13,6 +13,7 @@ func main() {
 	{
 		v1.POST("/register", user.Register)
 		v1.POST("/login", user.Login)
+		v1.POST("/edit", user.EditUserInfo)
 	}
 
 	r.Run(":8082")
